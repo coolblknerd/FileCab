@@ -2,4 +2,7 @@
   <%= link_to doc.title, doc %>
   <p><%= time_ago_in_words(doc.created_at) %></p>
   <p><%= truncate(doc.content, length: 50 ) %></p>
+  <%= link_to 'Edit', edit_document_path(doc) %>
 <% end %>
+
+<%= link_to "Create Doc", new_document_path %>

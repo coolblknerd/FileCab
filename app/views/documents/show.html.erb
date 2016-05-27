@@ -2,4 +2,6 @@
 
 <%= @doc.content %>
 
-<%= link_to "Home", root_path %>
+<%= link_to "All Documents", documents_path %>
+<%= link_to "Edit Document", edit_document_path(@doc) %>
+<%= link_to "Delete", document_path(@doc), method: :delete, data: { confirm: "Are you sure?" } %> 
