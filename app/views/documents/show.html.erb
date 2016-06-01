@@ -1,7 +1,6 @@
 <h1><%= @doc.title %></h1>
 
-<%= @doc.content %>
+<%= @doc.content %><br>
 
-<%= link_to "All Documents", documents_path %>
-<%= link_to "Edit Document", edit_document_path(@doc) %>
-<%= link_to "Delete", document_path(@doc), method: :delete, data: { confirm: "Are you sure?" } %> 
+<%= link_to "Edit Document", edit_document_path(@doc), class: 'btn btn-info' %><br>
+<%= link_to "Delete", document_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>

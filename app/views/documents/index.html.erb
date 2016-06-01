@@ -1,6 +1,34 @@
-<% @docs.each do |doc| %>
-  <%= link_to doc.title, doc %>
-  <p><%= time_ago_in_words(doc.created_at) %></p>
-  <p><%= truncate(doc.content, length: 50 ) %></p>
-  <%= link_to 'Edit', edit_document_path(doc) %>
-<% end %>
+<div class="col-xs-6 col-xs-offset-3">
+
+<% unless @docs.blank? %>
+
+  <% @docs.each do |doc| %>
+
+  <%= link_to doc do %> <!-- This will link to entire div -->
+  <div id='document-box'>
+    <div class="container-fluid">
+      <div id='document-title'>
+        <h2><%= doc.title %></h2>
+      </div>
+
+      <div id='time-ago'>
+        <h5><%= time_ago_in_words(doc.created_at) %></h5>
+      </div>
+
+      <div id='document-content'>
+        <p><%= truncate(doc.content, length: 50 ) %></p>
+      </div>
+
+      <%= link_to 'Edit', edit_document_path(doc), class: 'btn btn-info btn-sm' %>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+
+  <% else %>
+
+  <h2><%= link_to "Create Doc!", new_document_path, class: 'btn btn-primary btn-lg' %></h2>
+
+  <% end %> 
+
+</div>
