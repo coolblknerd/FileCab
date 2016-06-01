@@ -1,1 +1,10 @@
-<%= link_to "New Document", new_document_path %>
+<div class="jumbotron" id="welcome-page">
+  <div class="container">
+    <div class="col-xs-8 col-xs-offset-2" id="welcome-box">
+      <h1>Welcome to FileCabinet!</h1>
+      <h3>Take your digital filing to a new level!</h3>
+      <p><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+      <p>Already a member? <%= link_to "Log In", new_user_session_path %></p>
+    </div>
+  </div>
+</div>

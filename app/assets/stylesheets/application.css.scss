@@ -3,5 +3,34 @@
  */
 
 @import 'normalize';
+@import 'journal.css.scss';
 @import 'documents.css.scss';
 @import 'welcome.css.scss';
+
+
+/* --------- Welcome Page (Unauthenticated) ---------- */
+
+#welcome-page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url('/assets/storage 2.jpg');
+
+  #welcome-box {
+    border-radius: 5px;
+    margin-top: 200px;
+    background-color: rgba(0, 0, 0, 0.66);
+
+    h1 {
+      color: white;
+    }
+
+    h3 {
+      color: white;
+    }
+  }
+}
