@@ -1,7 +1,8 @@
 /*
- *= require_self
- */
-
+*= require_self
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import 'normalize';
 @import 'journal.css.scss';
 @import 'documents.css.scss';
@@ -64,4 +65,10 @@
   margin-top: 150px;
   padding-bottom: 15px;
   border-radius: 5px;
+}
+
+/*------------ Main --------------- */
+
+#main-box {
+  margin-top: 20px;
 }
