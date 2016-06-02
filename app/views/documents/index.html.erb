@@ -1,6 +1,6 @@
 <div class="col-xs-6 col-xs-offset-3">
 
-<% unless @docs.blank? %>
+  <% unless @docs.blank? %>
 
   <% @docs.each do |doc| %>
 
@@ -19,7 +19,10 @@
         <p><%= truncate(doc.content, length: 50 ) %></p>
       </div>
 
-      <%= link_to 'Edit', edit_document_path(doc), class: 'btn btn-info btn-sm' %>
+      <div class="btn-group pull-right" role="group">
+        <%= link_to 'Edit', edit_document_path(doc), class: 'btn btn-info' %>
+        <%= link_to 'Delete', document_path(doc), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+      </div>
     </div>
   </div>
   <% end %>
@@ -29,6 +32,6 @@
 
   <h2><%= link_to "Create Doc!", new_document_path, class: 'btn btn-primary btn-lg' %></h2>
 
-  <% end %> 
+  <% end %>
 
 </div>

@@ -48,7 +48,6 @@
 
   a:hover {
     text-decoration: none;
-    background-color: white;
   }
 }
 
@@ -56,4 +55,13 @@
 
 #show-button {
   padding-top: 10px;
+}
+
+/* ----------- Log-In --------------- */
+
+#log-in {
+  border: 1px solid gray;
+  margin-top: 150px;
+  padding-bottom: 15px;
+  border-radius: 5px;
 }
