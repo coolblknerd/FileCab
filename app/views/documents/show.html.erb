@@ -1,6 +1,16 @@
-<h1><%= @doc.title %></h1>
+<div class='col-xs-8 col-xs-offset-2 'id="show-box">
 
-<%= @doc.content %><br>
+  <div id='show-title'>
+    <h1><%= @doc.title %></h1>
+  </div>
 
-<%= link_to "Edit Document", edit_document_path(@doc), class: 'btn btn-info' %><br>
-<%= link_to "Delete", document_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+  <div id='show-content'>
+    <%= simple_format(@doc.content) %>
+  </div>
+
+  <div class="btn-group" role="group" id='show-button'>
+    <%= link_to "Edit Document", edit_document_path(@doc), class: 'btn btn-info' %>
+    <%= link_to "Delete", document_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+  </div>
+
+</div>
